@@ -471,7 +471,6 @@
       <!-- BELOW: game -->
       <section class="card gameCard">
         <h1 id="gameTitle">Game</h1>
-        <p class="muted" id="gameDesc">Classic header: mines counter • smiley • timer.</p>
 
         <div class="msShell">
           <div class="msPanel bevel">
@@ -530,7 +529,6 @@
       statusCustomHint: "Tip: choose Custom to edit size.",
 
       gameTitle: "Game",
-      gameDesc: "Classic header: mines counter • smiley • timer.",
 
       help: `
 <b>Controls</b><br/>
@@ -572,7 +570,6 @@ Keyboard: <kbd>Arrows</kbd> move • <kbd>Enter</kbd> open • <kbd>Space</kbd>/
       statusCustomHint: "Tips: välj Custom för att ändra storlek.",
 
       gameTitle: "Spel",
-      gameDesc: "Klassisk topp: minor • smiley • timer.",
 
       help: `
 <b>Kontroller</b><br/>
@@ -650,7 +647,6 @@ Tangentbord: <kbd>Pilar</kbd> flytta • <kbd>Enter</kbd> öppna • <kbd>Space<
   const helpText = document.getElementById("helpText");
 
   const gameTitle = document.getElementById("gameTitle");
-  const gameDesc = document.getElementById("gameDesc");
 
   const mineDigits = document.getElementById("mineDigits");
   const timeDigits = document.getElementById("timeDigits");
@@ -1129,7 +1125,6 @@ Tangentbord: <kbd>Pilar</kbd> flytta • <kbd>Enter</kbd> öppna • <kbd>Space<
     leftPillLabel.textContent = L.left;
 
     gameTitle.textContent = L.gameTitle;
-    gameDesc.textContent = L.gameDesc;
 
     helpText.innerHTML = L.help;
 
