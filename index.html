@@ -3,8 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Minesweeper</title>
-  <meta name="description" content="Minesweeper with classic layout, custom size, chording, theme + SV/EN." />
+
+  <title>Minesweeper – Classic online (SV/EN) | Simple Tools</title>
+  <meta name="description" content="Play classic Minesweeper online (minröj) with custom board size, chording, dark/light theme and Swedish/English." />
+
+  <!-- Canonical (helps Google index the preferred URL) -->
+  <link rel="canonical" href="https://simple-tools-dev.github.io/minesweeper/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Optional: simple extra hints (not critical, but harmless) -->
+  <meta name="author" content="simple-tools-dev" />
+  <meta name="keywords" content="minesweeper, minesweeper online, classic minesweeper, spela minesweeper, minröj, minesweeper game, web minesweeper" />
+
+  <!-- Open Graph (nice previews when sharing; can help CTR) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Simple Tools" />
+  <meta property="og:title" content="Minesweeper – Classic online (SV/EN)" />
+  <meta property="og:description" content="Classic Minesweeper online (minröj) with custom board size, chording, dark/light theme and Swedish/English." />
+  <meta property="og:url" content="https://simple-tools-dev.github.io/minesweeper/" />
+  <!-- If you add an image file later, uncomment these:
+  <meta property="og:image" content="https://simple-tools-dev.github.io/minesweeper/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Minesweeper – Classic online (SV/EN)" />
+  <meta name="twitter:description" content="Classic Minesweeper online with custom size, chording, theme and SV/EN." />
+  <!-- <meta name="twitter:image" content="https://simple-tools-dev.github.io/minesweeper/og-image.png" /> -->
+
+  <!-- hreflang (signals EN/SV variants even if same URL) -->
+  <link rel="alternate" hreflang="en" href="https://simple-tools-dev.github.io/minesweeper/" />
+  <link rel="alternate" hreflang="sv" href="https://simple-tools-dev.github.io/minesweeper/" />
+  <link rel="alternate" hreflang="x-default" href="https://simple-tools-dev.github.io/minesweeper/" />
+
+  <!-- Structured data (helps Google understand the page as a web game) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Minesweeper",
+    "url": "https://simple-tools-dev.github.io/minesweeper/",
+    "inLanguage": ["en", "sv"],
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web",
+    "gamePlatform": "Web browser",
+    "description": "Classic Minesweeper online (minröj) with custom board size, chording, dark/light theme and Swedish/English.",
+    "author": {
+      "@type": "Organization",
+      "name": "Simple Tools",
+      "url": "https://simple-tools-dev.github.io/"
+    }
+  }
+  </script>
 
   <script data-goatcounter="https://simple-tools-dev.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
@@ -747,7 +801,7 @@ Tangentbord: <kbd>Pilar</kbd> flytta • <kbd>Enter</kbd> öppna • <kbd>Space<
   }
 
   function buildEmptyGrid(){
-    grid = Array.from({length:R*C}, ()=>({
+    grid = Array.from({length:R*C}, () => ({
       mine:false, revealed:false, flagged:false, question:false, n:0
     }));
     firstClick = true;
